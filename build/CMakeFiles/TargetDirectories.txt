@@ -1,0 +1,4 @@
+/userdata/vi_rtmp/build/CMakeFiles/rebuild_cache.dir
+/userdata/vi_rtmp/build/CMakeFiles/vi_3568_rtmp.dir
+/userdata/vi_rtmp/build/CMakeFiles/edit_cache.dir
+/userdata/vi_rtmp/build/CMakeFiles/rtmp_test.dir

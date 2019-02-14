@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/h264_to_rtmp.h
-libavutil/timestamp.h
--
-libavformat/avformat.h
--
-
 ../include/simple_rtmp_pusher.h
 libavformat/avformat.h
 -
@@ -242,34 +236,6 @@ mpp_debug.h
 mpp_frame.h
 /home/marc/mpp-develop/utils/mpp_frame.h
 
-/userdata/vi_rtmp/src/Common/macros.cpp
-macros.h
-/userdata/vi_rtmp/src/Common/macros.h
-Util/util.h
-/userdata/vi_rtmp/src/Common/Util/util.h
-ZLMVersion.h
-/userdata/vi_rtmp/src/Common/ZLMVersion.h
-
-/userdata/vi_rtmp/src/Common/macros.h
-Util/logger.h
-/userdata/vi_rtmp/src/Common/Util/logger.h
-iostream
--
-sstream
--
-arpa/inet.h
--
-machine/endian.h
--
-arpa/inet.h
--
-endian.h
--
-
-/userdata/vi_rtmp/src/h264_to_rtmp.cpp
-h264_to_rtmp.h
-/userdata/vi_rtmp/src/h264_to_rtmp.h
-
 /userdata/vi_rtmp/src/main.cpp
 string.h
 -
@@ -301,10 +267,6 @@ time.h
 -
 arpa/inet.h
 -
-
-/userdata/vi_rtmp/src/simple_rtmp_pusher.cpp
-simple_rtmp_pusher.h
-/userdata/vi_rtmp/src/simple_rtmp_pusher.h
 
 /usr/local/include/Thread/semaphore.h
 semaphore.h

@@ -248,7 +248,6 @@ MPP_RET test_mpp_enc_cfg_setup(MpiEncMultiCtxInfo *info)
     RK_U32 gop_mode = p->gop_mode;
     MppEncRefCfg ref = NULL;
 
-
     /* setup default parameter */
     if (p->fps_in_den == 0)
         p->fps_in_den = 1;
@@ -261,7 +260,7 @@ MPP_RET test_mpp_enc_cfg_setup(MpiEncMultiCtxInfo *info)
 
     printf("p->fps_in_den : %d p->fps_in_num: %d \n", p->fps_in_den, p->fps_in_num);
     printf("p->fps_out_den : %d p->fps_out_num: %d \n", p->fps_out_den, p->fps_out_num);
-    
+
     if (!p->bps)
         p->bps = p->width * p->height / 8 * (p->fps_out_num / p->fps_out_den);
 
@@ -1046,8 +1045,8 @@ MPP_RET test_mpp_run(MpiEncMultiCtxInfo *info)
                         init_rtmp_connection();
 
                         set_start_time();
-
-                        send_to_rtmp_server((uint8_t *)pps_data, pps_data_len);
+                        fwrite(pps_data, 1, pps_data_len, p->fp_output);
+                        // send_to_rtmp_server((uint8_t *)pps_data, pps_data_len);
 
                         write_counter = 1;
                     }
@@ -1067,9 +1066,9 @@ MPP_RET test_mpp_run(MpiEncMultiCtxInfo *info)
                     // printf("\n");
 
                     // 写入文件
-                    // fwrite(ptr, 1, len, p->fp_output);
+                    fwrite(ptr, 1, len, p->fp_output);
                     // get_time_gap();
-                    send_to_rtmp_server((uint8_t *)ptr, len);
+                    // send_to_rtmp_server((uint8_t *)ptr, len);
                 }
 
                 if (p->fp_verify && !p->pkt_eos)
@@ -1352,18 +1351,15 @@ int enc_test_multi(MpiEncTestArgs *cmd, const char *name)
         return -1;
     }
 
-    for (i = 0; i < cmd->nthreads; i++)
+    ctxs[0].cmd = cmd;
+    ctxs[0].name = name;
+    ctxs[0].chn = 0;
+    printf("ctxs[%d].chn = %d\n", 0, ctxs[0].chn);
+    ret = pthread_create(&ctxs[0].thd, NULL, enc_test, &ctxs[0]);
+    if (ret)
     {
-        ctxs[i].cmd = cmd;
-        ctxs[i].name = name;
-        ctxs[i].chn = i;
-        printf("ctxs[%d].chn = %d\n", i, ctxs[i].chn);
-        ret = pthread_create(&ctxs[i].thd, NULL, enc_test, &ctxs[i]);
-        if (ret)
-        {
-            mpp_err("failed to create thread %d\n", i);
-            return ret;
-        }
+        mpp_err("failed to create thread %d\n", 0);
+        return ret;
     }
 
     printf("cmd->frame_num :%d\n", cmd->frame_num);
@@ -1412,11 +1408,11 @@ int main(void)
     argv[1] = "-i";
     argv[2] = "/dev/video0";
     argv[3] = "-w";
-    argv[4] = "1920";
+    argv[4] = "800";
     argv[5] = "-h";
-    argv[6] = "1080";
+    argv[6] = "600";
     argv[7] = "-o";
-    argv[8] = "sample.h264";
+    argv[8] = "sample_720.h264";
     argv[9] = "-t";
     argv[10] = "7";
     argv[11] = "-n";

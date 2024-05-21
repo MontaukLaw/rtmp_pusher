@@ -18,4 +18,6 @@ void send_to_rtmp_server(uint8_t *h264_data, int data_len);
 
 void set_start_time(void);
 
+void get_time_gap(void);
+
 #endif

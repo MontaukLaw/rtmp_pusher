@@ -26,7 +26,8 @@ void init_rtmp_connection(void)
     int videoindex = -1;
 
     in_filename = "test10.h264";
-    out_filename = "rtmp://43.139.145.196/live/livestream?secret=e8c13b9687ec47f989d80f08b763fdbf";
+    // out_filename = "rtmp://43.139.145.196/live/livestream?secret=e8c13b9687ec47f989d80f08b763fdbf";
+    out_filename = "rtmp://159.75.182.56/live/livestream?secret=334a72b548e8443fa51531391bfe2a2f";
     // printf("%s\n", in_filename);
 
     av_register_all();
@@ -136,6 +137,34 @@ void set_start_time(void)
 
 static AVPacket pkt;
 static int first_pack = 0;
+
+void get_time_gap(void)
+{
+    static int64_t last_time = 0;
+    static int64_t frame_counter = 1;
+    // static RK_S32 packet_cnt = 0;
+    static int64_t gime_gap_total = 0;
+    // printf("# Get packet-%d, size %zu\n", packet_cnt, RK_MPI_MB_GetSize(mb));
+    if (frame_counter == 1)
+    {
+        last_time = av_gettime();
+    }
+    int64_t time_gap_ms = (av_gettime() - last_time) / 1000;
+    printf("time gap:%lld\n", time_gap_ms);
+    gime_gap_total = time_gap_ms + gime_gap_total;
+    // printf("gap total:%lld\n", gime_gap_total);
+    // printf("gap average:%lld\n", gime_gap_total / frame_counter);
+
+    last_time = av_gettime();
+    // RK_MPI_MB_ReleaseBuffer(mb);
+    frame_counter++;
+}
+
+void send_to_rtmp_server_testing(uint8_t *h264_data, int data_len)
+{
+    get_time_gap();
+}
+
 void send_to_rtmp_server(uint8_t *h264_data, int data_len)
 {
     int ret = 0;
@@ -149,6 +178,41 @@ void send_to_rtmp_server(uint8_t *h264_data, int data_len)
             printf("av_read_frame failed\n");
             return;
         }
+        ifmt_ctx->streams[0]->time_base.den = 1000000;
+    }
+
+    // Get an AVPacket
+    pkt.data = h264_data;
+    pkt.size = data_len;
+    pkt.pts = frame_index * 33333;
+    pkt.dts = pkt.pts;
+    pkt.duration = 33;
+    printf("Sending %8d \n", frame_index);
+    ret = av_interleaved_write_frame(ofmt_ctx, &pkt);
+    if (ret < 0)
+    {
+        printf("Error muxing packet\n");
+        return;
+    }
+
+      frame_index++;
+    av_free_packet(&pkt);
+}
+
+void send_to_rtmp_server_tested(uint8_t *h264_data, int data_len)
+{
+    int ret = 0;
+    AVStream *in_stream, *out_stream;
+    if (first_pack == 0)
+    {
+        ret = av_read_frame(ifmt_ctx, &pkt);
+        first_pack = 1;
+        if (ret < 0)
+        {
+            printf("av_read_frame failed\n");
+            return;
+        }
+        ifmt_ctx->streams[0]->time_base.den = 1000000;
     }
 
     // Get an AVPacket
@@ -159,6 +223,7 @@ void send_to_rtmp_server(uint8_t *h264_data, int data_len)
     // Write PTS
     AVRational time_base1 = ifmt_ctx->streams[0]->time_base;
     printf("time_base: num: %d len: %d\n", time_base1.num, time_base1.den);
+    printf("frame :num:%d den:%d\n", ifmt_ctx->streams[0]->r_frame_rate.num, ifmt_ctx->streams[0]->r_frame_rate.den);
 
     // Duration between 2 frames (us)
     int64_t calc_duration = (double)AV_TIME_BASE / av_q2d(ifmt_ctx->streams[0]->r_frame_rate);
@@ -171,11 +236,16 @@ void send_to_rtmp_server(uint8_t *h264_data, int data_len)
     // Important:Delay
     AVRational time_base = ifmt_ctx->streams[0]->time_base;
     AVRational time_base_q = {1, AV_TIME_BASE};
+    // printf("time_base num :%d den:%d time_base_q num :%d den:%d \n",
+    // time_base.num, time_base.den, time_base_q.num, time_base_q.den);
     int64_t pts_time = av_rescale_q(pkt.dts, time_base, time_base_q);
     int64_t now_time = av_gettime() - start_time;
     printf("pts_time:%d , now_time :%d \n", pts_time, now_time);
     if (pts_time > now_time)
+    {
         av_usleep(pts_time - now_time);
+        printf("-----------------\n");
+    }
 
     in_stream = ifmt_ctx->streams[pkt.stream_index];
     out_stream = ofmt_ctx->streams[pkt.stream_index];
@@ -185,15 +255,18 @@ void send_to_rtmp_server(uint8_t *h264_data, int data_len)
     pkt.dts = av_rescale_q_rnd(pkt.dts, in_stream->time_base, out_stream->time_base, (AVRounding)(AV_ROUND_NEAR_INF | AV_ROUND_PASS_MINMAX));
     pkt.duration = av_rescale_q(pkt.duration, in_stream->time_base, out_stream->time_base);
     pkt.pos = -1;
+
     // Print to Screen
     printf("Send %8d video frames to output URL\n", frame_index);
     frame_index++;
 
-    for (int j = 0; j < 10; j++)
-    {
-        printf("%02x ", pkt.data[j]);
-    }
-    printf("\n");
+    printf("pts:%d dts:%d duration:%d\n", pkt.pts, pkt.dts, pkt.duration);
+
+    // for (int j = 0; j < 10; j++)
+    // {
+    //     printf("%02x ", pkt.data[j]);
+    // }
+    // printf("\n");
     ret = av_interleaved_write_frame(ofmt_ctx, &pkt);
     if (ret < 0)
     {

@@ -15,28 +15,28 @@ The CXX compiler identification is GNU, found in "/userdata/vi_rtmp/build/CMakeF
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_aa17c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_aa17c.dir/build.make CMakeFiles/cmTC_aa17c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8ff9a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8ff9a.dir/build.make CMakeFiles/cmTC_8ff9a.dir/build
 make[1]: 进入目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_aa17c.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_aa17c.dir/testCXXCompiler.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_aa17c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa17c.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_aa17c.dir/testCXXCompiler.cxx.o  -o cmTC_aa17c 
+Building CXX object CMakeFiles/cmTC_8ff9a.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_8ff9a.dir/testCXXCompiler.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_8ff9a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ff9a.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_8ff9a.dir/testCXXCompiler.cxx.o  -o cmTC_8ff9a 
 make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0f282/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0f282.dir/build.make CMakeFiles/cmTC_0f282.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_bb572/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bb572.dir/build.make CMakeFiles/cmTC_bb572.dir/build
 make[1]: 进入目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_0f282.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_0f282.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_0f282
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f282.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_0f282.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0f282 
+Building CXX object CMakeFiles/cmTC_bb572.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_bb572.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_bb572
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb572.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_bb572.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bb572 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/8/lto-wrapper
@@ -46,9 +46,9 @@ Thread model: posix
 gcc version 8.3.0 (Debian 8.3.0-6) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/8/:/usr/lib/gcc/aarch64-linux-gnu/8/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/8/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/8/:/usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/8/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0f282' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
- /usr/lib/gcc/aarch64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccmkomiF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_0f282 /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/8 -L/usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/8/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/8/../../.. CMakeFiles/cmTC_0f282.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/8/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0f282' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bb572' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
+ /usr/lib/gcc/aarch64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cccHGXU7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_bb572 /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/8 -L/usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/8/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/8/../../.. CMakeFiles/cmTC_bb572.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/8/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bb572' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64'
 make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 
 
@@ -56,14 +56,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_0f282/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_0f282.dir/build.make CMakeFiles/cmTC_0f282.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_bb572/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_bb572.dir/build.make CMakeFiles/cmTC_bb572.dir/build]
   ignore line: [make[1]: 进入目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”]
-  ignore line: [Building CXX object CMakeFiles/cmTC_0f282.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_0f282.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_0f282]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f282.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_0f282.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0f282 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_bb572.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_bb572.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_bb572]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb572.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_bb572.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bb572 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/8/lto-wrapper]
@@ -73,13 +73,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 8.3.0 (Debian 8.3.0-6) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/8/:/usr/lib/gcc/aarch64-linux-gnu/8/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/8/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/8/:/usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/8/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0f282' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccmkomiF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_0f282 /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/8 -L/usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/8/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/8/../../.. CMakeFiles/cmTC_0f282.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/8/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bb572' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/8/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cccHGXU7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_bb572 /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/8/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/8 -L/usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/8/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/8/../../.. CMakeFiles/cmTC_bb572.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/8/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/8/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/8/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccmkomiF.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cccHGXU7.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -96,7 +96,7 @@ Parsed CXX implicit link information from above output:
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_0f282] ==> ignore
+    arg [cmTC_bb572] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/8/../../../aarch64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/8/crtbeginS.o] ==> ignore
@@ -108,7 +108,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/8/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/8/../../..]
-    arg [CMakeFiles/cmTC_0f282.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_bb572.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -136,14 +136,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
 Change Dir: /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f2b30/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f2b30.dir/build.make CMakeFiles/cmTC_f2b30.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f6b64/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f6b64.dir/build.make CMakeFiles/cmTC_f6b64.dir/build
 make[1]: 进入目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_f2b30.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++2a -o CMakeFiles/cmTC_f2b30.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f2b30
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2b30.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_f2b30.dir/feature_tests.cxx.o  -o cmTC_f2b30 
+Building CXX object CMakeFiles/cmTC_f6b64.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++2a -o CMakeFiles/cmTC_f6b64.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f6b64
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6b64.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_f6b64.dir/feature_tests.cxx.o  -o cmTC_f6b64 
 make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 
 
@@ -209,14 +209,14 @@ make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
 Change Dir: /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_91e52/fast"
-/usr/bin/make -f CMakeFiles/cmTC_91e52.dir/build.make CMakeFiles/cmTC_91e52.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_72a4e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_72a4e.dir/build.make CMakeFiles/cmTC_72a4e.dir/build
 make[1]: 进入目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_91e52.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++17 -o CMakeFiles/cmTC_91e52.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_91e52
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91e52.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_91e52.dir/feature_tests.cxx.o  -o cmTC_91e52 
+Building CXX object CMakeFiles/cmTC_72a4e.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++17 -o CMakeFiles/cmTC_72a4e.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_72a4e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72a4e.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_72a4e.dir/feature_tests.cxx.o  -o cmTC_72a4e 
 make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 
 
@@ -282,14 +282,14 @@ make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a68cc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a68cc.dir/build.make CMakeFiles/cmTC_a68cc.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8bdf5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8bdf5.dir/build.make CMakeFiles/cmTC_8bdf5.dir/build
 make[1]: 进入目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_a68cc.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_a68cc.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_a68cc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a68cc.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_a68cc.dir/feature_tests.cxx.o  -o cmTC_a68cc 
+Building CXX object CMakeFiles/cmTC_8bdf5.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_8bdf5.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8bdf5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bdf5.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_8bdf5.dir/feature_tests.cxx.o  -o cmTC_8bdf5 
 make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 
 
@@ -355,14 +355,14 @@ make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_62333/fast"
-/usr/bin/make -f CMakeFiles/cmTC_62333.dir/build.make CMakeFiles/cmTC_62333.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_74e25/fast"
+/usr/bin/make -f CMakeFiles/cmTC_74e25.dir/build.make CMakeFiles/cmTC_74e25.dir/build
 make[1]: 进入目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_62333.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_62333.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_62333
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62333.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_62333.dir/feature_tests.cxx.o  -o cmTC_62333 
+Building CXX object CMakeFiles/cmTC_74e25.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_74e25.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_74e25
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74e25.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_74e25.dir/feature_tests.cxx.o  -o cmTC_74e25 
 make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 
 
@@ -428,14 +428,14 @@ make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /userdata/vi_rtmp/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c8ad6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c8ad6.dir/build.make CMakeFiles/cmTC_c8ad6.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a1a53/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a1a53.dir/build.make CMakeFiles/cmTC_a1a53.dir/build
 make[1]: 进入目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
-Building CXX object CMakeFiles/cmTC_c8ad6.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_c8ad6.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c8ad6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8ad6.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_c8ad6.dir/feature_tests.cxx.o  -o cmTC_c8ad6 
+Building CXX object CMakeFiles/cmTC_a1a53.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_a1a53.dir/feature_tests.cxx.o -c /userdata/vi_rtmp/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a1a53
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1a53.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_a1a53.dir/feature_tests.cxx.o  -o cmTC_a1a53 
 make[1]: 离开目录“/userdata/vi_rtmp/build/CMakeFiles/CMakeTmp”
 
 

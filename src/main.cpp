@@ -153,7 +153,7 @@ MPP_RET test_ctx_init(MpiEncMultiCtxInfo *info)
     p->ver_stride = (cmd->ver_stride) ? (cmd->ver_stride) : (MPP_ALIGN(cmd->height, 16));
     p->fmt = cmd->format;
     p->type = cmd->type;
-    p->bps = 20000000;        // cmd->bps_target;
+    p->bps = 20000000;           // cmd->bps_target;
     p->bps_min = p->bps * 5 / 4; // cmd->bps_min;
     p->bps_max = p->bps * 3 / 4; // cmd->bps_max;
     p->rc_mode = cmd->rc_mode;
@@ -248,6 +248,7 @@ MPP_RET test_mpp_enc_cfg_setup(MpiEncMultiCtxInfo *info)
     RK_U32 gop_mode = p->gop_mode;
     MppEncRefCfg ref = NULL;
 
+
     /* setup default parameter */
     if (p->fps_in_den == 0)
         p->fps_in_den = 1;
@@ -258,11 +259,13 @@ MPP_RET test_mpp_enc_cfg_setup(MpiEncMultiCtxInfo *info)
     if (p->fps_out_num == 0)
         p->fps_out_num = 30;
 
+    printf("p->fps_in_den : %d p->fps_in_num: %d \n", p->fps_in_den, p->fps_in_num);
+    printf("p->fps_out_den : %d p->fps_out_num: %d \n", p->fps_out_den, p->fps_out_num);
+    
     if (!p->bps)
         p->bps = p->width * p->height / 8 * (p->fps_out_num / p->fps_out_den);
 
     mpp_enc_cfg_set_s32(cfg, "tune:scene_mode", p->scene_mode);
-
     mpp_enc_cfg_set_s32(cfg, "prep:width", p->width);
     mpp_enc_cfg_set_s32(cfg, "prep:height", p->height);
     mpp_enc_cfg_set_s32(cfg, "prep:hor_stride", p->hor_stride);
@@ -1011,7 +1014,7 @@ MPP_RET test_mpp_run(MpiEncMultiCtxInfo *info)
 
                 p->pkt_eos = mpp_packet_get_eos(packet);
 
-                printf("Packet data len:%d\n", len);
+                // printf("Packet data len:%d\n", len);
 
                 // 数据发送点
                 // rtmp_init((char *)packet, len);
@@ -1048,9 +1051,24 @@ MPP_RET test_mpp_run(MpiEncMultiCtxInfo *info)
 
                         write_counter = 1;
                     }
+
+                    char *h264_data = (char *)ptr;
+                    // if (h264_data[0] != 0 || h264_data[1] != 0 || h264_data[2] != 0 || h264_data[3] != 1)
+                    // {
+                    //     printf("----------\n");
+                    // }
+                    // printf("Type: 0x%02x\n", h264_data[4]);
+
+                    for (int i = 0; i < 10; i++)
+                    {
+                        // printf("%02x ", h264_data[i]);
+                    }
+
+                    // printf("\n");
+
                     // 写入文件
                     // fwrite(ptr, 1, len, p->fp_output);
-
+                    // get_time_gap();
                     send_to_rtmp_server((uint8_t *)ptr, len);
                 }
 
@@ -1398,7 +1416,7 @@ int main(void)
     argv[5] = "-h";
     argv[6] = "1080";
     argv[7] = "-o";
-    argv[8] = "test.h264";
+    argv[8] = "sample.h264";
     argv[9] = "-t";
     argv[10] = "7";
     argv[11] = "-n";
